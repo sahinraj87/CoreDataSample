@@ -47,7 +47,11 @@ class ViewController: UIViewController {
                 customerInfo.address = address
                 
                 do {
-                   try context.save()
+                    try context.save()
+                    nameTextView.text = ""
+                    ageTextView.text = ""
+                    addressTextView.text = ""
+                    
                     print("Data saved successfully...!")
                 } catch {
                     print("Error in saving data\(error)")
@@ -57,9 +61,12 @@ class ViewController: UIViewController {
                 print("Empty fields")
             }
         }
-        
-        
     }
+ 
+    @IBAction func viewBtnTapped(_ sender: UIButton) {
+       
+    }
+    
     
 }
 
