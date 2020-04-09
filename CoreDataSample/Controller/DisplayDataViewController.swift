@@ -11,7 +11,7 @@ import CoreData
 
 class DisplayDataViewController: UIViewController {
     
-    
+    public var refFromClassID = 0
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,16 +24,6 @@ class DisplayDataViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     func fetchDataFromCoreData() {
         let request:NSFetchRequest<CustomerInfo> = CustomerInfo.fetchRequest()
         do {
@@ -43,6 +33,7 @@ class DisplayDataViewController: UIViewController {
         }
         tableView.reloadData()
     }
+    
 }
 
 extension DisplayDataViewController: UITableViewDataSource {
@@ -67,5 +58,39 @@ extension DisplayDataViewController: UITableViewDataSource {
 }
 
 extension DisplayDataViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        switch refFromClassID {
+        case 0:
+            print("Do nothing!")
+        case 1:
+            print("Delete :\(indexPath.row)")
+            deleteData(with: indexPath)
+            
+        default:
+            print("default case")
+        }
+    }
     
+    func deleteData(with indexPath: IndexPath) {
+    
+        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: .alert)
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+        })
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+       
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+        
+    }
 }

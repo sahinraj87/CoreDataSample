@@ -81,8 +81,10 @@ class ViewController: UIViewController {
             switch clickRef {
             case 0:
                 vc?.title = "View Data"
+                vc?.refFromClassID = 0
             case 1:
                 vc?.title = "Delete Data"
+                vc?.refFromClassID = 1
             default:
                 vc?.title = "View only"
             }
