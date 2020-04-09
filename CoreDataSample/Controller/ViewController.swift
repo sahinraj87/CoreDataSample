@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "FedEx Core Data"
         // Do any additional setup after loading the view.
     }
     
