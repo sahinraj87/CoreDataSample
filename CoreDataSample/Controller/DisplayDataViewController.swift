@@ -24,6 +24,7 @@ class DisplayDataViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     func fetchDataFromCoreData() {
         let request:NSFetchRequest<CustomerInfo> = CustomerInfo.fetchRequest()
         do {
@@ -32,6 +33,22 @@ class DisplayDataViewController: UIViewController {
             print("Error in fetching Request: \(error)")
         }
         tableView.reloadData()
+    }
+    
+    func deleteDataFromCoreData(with indexPath:IndexPath) {
+        
+        do {
+            fetchDataFromCoreData()
+            context.delete(localCustomerData[indexPath.row])
+            localCustomerData.remove(at: indexPath.row)
+            try context.save()
+            
+            tableView.reloadData()
+            
+        } catch {
+            print("Exception in deleteDataFromCoreData: \(error)")
+        }
+        
     }
     
 }
@@ -58,7 +75,9 @@ extension DisplayDataViewController: UITableViewDataSource {
 }
 
 extension DisplayDataViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    
+    
+    func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch refFromClassID {
         case 0:
@@ -73,18 +92,19 @@ extension DisplayDataViewController: UITableViewDelegate {
     }
     
     func deleteData(with indexPath: IndexPath) {
-    
+        
         let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: .alert)
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
+            self.deleteDataFromCoreData(with: indexPath)
         })
         
         // Create Cancel button with action handlder
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
             print("Cancel button tapped")
         }
-       
+        
         //Add OK and Cancel button to dialog message
         dialogMessage.addAction(ok)
         dialogMessage.addAction(cancel)

@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "DisplayDataViewController.deleteDataFromCoreData(with:):DisplayDataViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "context">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DisplayDataViewController.fetchDataFromCoreData():DisplayDataViewController.swift">
          <PersistentStrings>
             <PersistentString

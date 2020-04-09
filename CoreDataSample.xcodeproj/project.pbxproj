@@ -14,8 +14,8 @@
 		76C1ACCD243E3A5B00805F39 /* CoreDataSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76C1ACCB243E3A5B00805F39 /* CoreDataSample.xcdatamodeld */; };
 		76C1ACCF243E3A5D00805F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C1ACCE243E3A5D00805F39 /* Assets.xcassets */; };
 		76C1ACD2243E3A5D00805F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C1ACD0243E3A5D00805F39 /* LaunchScreen.storyboard */; };
-		76F4667B243F8A6B001A70D9 /* CustomerInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F46679243F8A6B001A70D9 /* CustomerInfo+CoreDataClass.swift */; };
-		76F4667C243F8A6B001A70D9 /* CustomerInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4667A243F8A6B001A70D9 /* CustomerInfo+CoreDataProperties.swift */; };
+		76F4667F243F921C001A70D9 /* CustomerInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4667D243F921C001A70D9 /* CustomerInfo+CoreDataClass.swift */; };
+		76F46680243F921C001A70D9 /* CustomerInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4667E243F921C001A70D9 /* CustomerInfo+CoreDataProperties.swift */; };
 		76F7CB20243E5EF100D641C8 /* DisplayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7CB1F243E5EF100D641C8 /* DisplayDataViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +29,8 @@
 		76C1ACCE243E3A5D00805F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76C1ACD1243E3A5D00805F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76C1ACD3243E3A5D00805F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76F46679243F8A6B001A70D9 /* CustomerInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomerInfo+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		76F4667A243F8A6B001A70D9 /* CustomerInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomerInfo+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		76F4667D243F921C001A70D9 /* CustomerInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomerInfo+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		76F4667E243F921C001A70D9 /* CustomerInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomerInfo+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		76F7CB1F243E5EF100D641C8 /* DisplayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,8 +96,8 @@
 		76F7CB23243E5F0B00D641C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				76F46679243F8A6B001A70D9 /* CustomerInfo+CoreDataClass.swift */,
-				76F4667A243F8A6B001A70D9 /* CustomerInfo+CoreDataProperties.swift */,
+				76F4667D243F921C001A70D9 /* CustomerInfo+CoreDataClass.swift */,
+				76F4667E243F921C001A70D9 /* CustomerInfo+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,9 +184,9 @@
 			files = (
 				76C1ACCD243E3A5B00805F39 /* CoreDataSample.xcdatamodeld in Sources */,
 				76C1ACC7243E3A5B00805F39 /* ViewController.swift in Sources */,
-				76F4667B243F8A6B001A70D9 /* CustomerInfo+CoreDataClass.swift in Sources */,
+				76F4667F243F921C001A70D9 /* CustomerInfo+CoreDataClass.swift in Sources */,
 				76C1ACC3243E3A5B00805F39 /* AppDelegate.swift in Sources */,
-				76F4667C243F8A6B001A70D9 /* CustomerInfo+CoreDataProperties.swift in Sources */,
+				76F46680243F921C001A70D9 /* CustomerInfo+CoreDataProperties.swift in Sources */,
 				76C1ACC5243E3A5B00805F39 /* SceneDelegate.swift in Sources */,
 				76F7CB20243E5EF100D641C8 /* DisplayDataViewController.swift in Sources */,
 			);

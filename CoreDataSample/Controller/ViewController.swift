@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        clickRef = 0
+    }
+    
     @IBAction func saveBtnTapped(_ sender: UIButton) {
         
         if let name = nameTextView.text ,
