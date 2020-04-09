@@ -73,9 +73,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfc-UW-E6o"/>
                                     <action selector="viewBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4OL-qJ-d1v"/>
-                                    <segue destination="Dn1-8E-LxF" kind="show" id="6aJ-YC-CGj"/>
+                                    <segue destination="Dn1-8E-LxF" kind="show" id="S48-sg-MaT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCu-6n-9Xc">
+                                <rect key="frame" x="105" y="379" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PT9-kV-cbn"/>
+                                    <segue destination="Dn1-8E-LxF" kind="show" id="tgR-rk-RZS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,4 +163,7 @@
             <point key="canvasLocation" x="2024.6376811594205" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tgR-rk-RZS"/>
+    </inferredMetricsTieBreakers>
 </document>

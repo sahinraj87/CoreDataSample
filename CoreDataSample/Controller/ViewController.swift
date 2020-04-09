@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var addressTextView: UITextField!
     
+    var clickRef = 0
+    
     let context = ((UIApplication.shared.delegate) as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
@@ -62,11 +64,30 @@ class ViewController: UIViewController {
             }
         }
     }
- 
+    
     @IBAction func viewBtnTapped(_ sender: UIButton) {
-       
+        clickRef = 0
     }
     
     
+    @IBAction func deleteBtnTapped(_ sender: UIButton) {
+        clickRef = 1
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is DisplayDataViewController
+        {
+            let vc = segue.destination as? DisplayDataViewController
+            switch clickRef {
+            case 0:
+                vc?.title = "View Data"
+            case 1:
+                vc?.title = "Delete Data"
+            default:
+                vc?.title = "View only"
+            }
+            
+        }
+    }
 }
 
